@@ -1,0 +1,203 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage / tools
+lib-cov
+coverage
+*.lcov
+.nyc_output
+.grunt
+bower_components
+.lock-wscript
+
+# Compiled addons
+build/Release
+
+# Dependencies
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Caches
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+.cache
+.parcel-cache
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.firebase/
+.tern-port
+.vscode-test
+
+# Package output
+*.tgz
+.yarn-integrity
+
+# Env files (keep example)
+.env
+.env.*
+!.env.example
+
+# Framework builds
+.next
+out
+.nuxt
+dist
+.vuepress/dist
+.temp
+.svelte-kit/
+**/.vitepress/dist
+**/.vitepress/cache
+
+# Yarn v3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Vite timestamps
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Monorepo extras (nếu có các thư mục này)
+frontend/node_modules/
+backend/node_modules/
+admin/node_modules/
+frontend/dist/
+backend/dist/
+admin/dist/
+uploads/
+tmp/
+
+type NUL > .gitignore   # PowerShell: niêm file nếu chưa có
+notepad .gitignore      # mở để dán nội dung
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+admin/node_modules/
+
+# Builds / caches
+dist/
+build/
+frontend/dist/
+backend/dist/
+admin/dist/
+.cache
+.parcel-cache
+.next
+out
+.nuxt
+.svelte-kit/
+**/.vitepress/dist
+**/.vitepress/cache
+*.tsbuildinfo
+
+# Env (đừng đẩy secret)
+.env
+.env.*
+!.env.example
+
+# Upload/temp
+uploads/
+tmp/
+type NUL > .env.example
+notepad .env.example
+
+# Bỏ qua thư viện nặng
+node_modules/
+
+# Bỏ qua file môi trường chứa key bí mật
+.env
+
+# Bỏ qua file hệ thống
+.DS_Store
+dist/
+build/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
