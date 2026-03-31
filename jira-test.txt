@@ -1,0 +1,1 @@
+Đây là file tạo tự động để Test tính năng đồng bộ Jira và GitHub. JS-11.
