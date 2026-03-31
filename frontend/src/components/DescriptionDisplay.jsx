@@ -1,6 +1,6 @@
 import React from 'react';
 import DOMPurify from 'dompurify';
-import 'react-quill-new/dist/quill.snow.css'; // Import style gốc của Quill
+import 'react-quill/dist/quill.snow.css'; // Import style gốc của Quill
 
 const DescriptionDisplay = ({ content }) => {
   // 1. Kiểm tra đầu vào

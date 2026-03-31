@@ -3,8 +3,8 @@ import { assets } from '../assets/assets'
 import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
-import ReactQuill from 'react-quill-new';
-import 'react-quill-new/dist/quill.snow.css';
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
 
 const Add = ({ token }) => {
 
