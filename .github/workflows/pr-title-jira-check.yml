@@ -1,0 +1,24 @@
+name: PR Title Jira Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  check-pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR Title for Jira ID
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          echo "Title: $PR_TITLE"
+          
+          # Match forms like "JS-12", "feat: JS-31", "[JS-71] Fix bug"
+          if [[ ! $PR_TITLE =~ JS-[0-9]+ ]]; then
+            echo "::error::Tiêu đề PR bắt buộc phải chứa mã vé Jira (Ví dụ 'JS-31' hoặc 'JS-11')."
+            echo "::error::Tiêu đề hiện tại: $PR_TITLE"
+            echo "::error::Hãy sửa lại tiêu đề PR (Edit Title) thành định dạng: '[JS-xxx] Tên tính năng' hoặc 'feat: JS-xxx ...'"
+            exit 1
+          fi
+          
+          echo "Tiêu đề PR chứa Jira ID hợp lệ!"

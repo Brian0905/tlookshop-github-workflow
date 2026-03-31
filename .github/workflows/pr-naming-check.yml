@@ -1,0 +1,27 @@
+name: PR Branch Naming Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+      - develop
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate Branch Name
+        run: |
+          BRANCH_NAME="${{ github.head_ref }}"
+          echo "Branch: $BRANCH_NAME"
+          
+          # Allow feature/, bugfix/, hotfix/, release/ prefixes
+          if [[ ! $BRANCH_NAME =~ ^(feature|bugfix|hotfix|release)/ ]]; then
+            echo "::error::Tên nhánh (Branch Name) bị sai quy tắc!"
+            echo "::error::Tên nhánh hiện tại: $BRANCH_NAME"
+            echo "::error::Bạn phải bắt đầu băng: feature/..., bugfix/..., hotfix/... hoặc release/..."
+            exit 1
+          fi
+          
+          echo "Tên nhánh hợp lệ. Tuyệt vời!"
